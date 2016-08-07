@@ -4,32 +4,33 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'VundleVim/Vundle.vim' " Manages vim plugins
+Plugin 'scrooloose/nerdtree' " File tree directory
+Plugin 'scrooloose/nerdcommenter' " Comment out/uncomment coude
+Plugin 'scrooloose/syntastic' " Syntax checker
+Plugin 'tpope/vim-dispatch' " Separate window for suff like test results
+Plugin 'tpope/vim-fugitive' " Git wrapper
+Plugin 'altercation/vim-colors-solarized' " Solarized color scheme (Well tested on users)
+Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Autocomplete
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " Status line
+Plugin 'terryma/vim-multiple-cursors' " Change multiple lines simultaneously
 Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'janko-m/vim-test'
-Plugin 'sjl/gundo.vim'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'rstacruz/sparkup'
+Plugin 'mxw/vim-jsx' " jsx support (highlighting)
+Plugin 'janko-m/vim-test' " Run unit tests within vim
+Plugin 'sjl/gundo.vim' " File history
+Plugin 'easymotion/vim-easymotion' " Navigate within file
+Plugin 'ctrlpvim/ctrlp.vim' " Search and open files
+Plugin 'tpope/vim-surround' " Quickly add, change, delete surrounding brackets, parens, etc.
+Plugin 'rstacruz/sparkup' " Zen coding
 Plugin 'ervandew/supertab'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'mlaursen/vim-react-snippets'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'Valloric/MatchTagAlways'
-Plugin 'alvan/vim-closetag'
-Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
+Plugin 'SirVer/ultisnips' " Snippets
+Plugin 'honza/vim-snippets' " A bunch of snippets for ultisnips
+Plugin 'mlaursen/vim-react-snippets' " A bunch of react snippets for ultisnips
+Plugin 'jiangmiao/auto-pairs' " Highlights matching bracket, parens, etc.
+Plugin 'Valloric/MatchTagAlways' " Highlights matching html tag
+Plugin 'alvan/vim-closetag' " Closes a html tag automaticall
+Plugin 'pmsorhaindo/syntastic-local-eslint.vim' " Use local .eslintrc
+Plugn 'tpope/vim-eunuch' " Unix commands inside vim
 
 " Base config
 set fileencodings=ucs-bom,utf-8,latin1

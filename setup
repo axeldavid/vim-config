@@ -1,0 +1,13 @@
+main () {
+    # Check if config already exists
+    if [ -d ~/.vim ] || [ -f ~/.vimrc ]; then
+        echo 'Found existing vim config or your machine. Please remove ~/.vim and ~/.vimrc' before proceeding.
+        exit 1
+    fi
+
+    git clone --recursive git@github.com:axeldavid/vim-config-and-plugin-sync.git ~/.vim
+    ln -s ~/.vim/vimrc ~/.vimrc
+    vim +PluginInstall +qall
+}
+
+main

@@ -5,7 +5,7 @@ main () {
         exit 1
     fi
 
-    git clone --recursive git@github.com:axeldavid/vim-config-and-plugin-sync.git ~/.vim
+    git clone --recursive git@github.com:axeldavid/vim-config.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
     vim +PluginInstall +qall
 }

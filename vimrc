@@ -186,7 +186,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " YouCompleteMe Close preview window automatically
 autocmd CompleteDone * pclose
 
-" MatchTagAlways and vim-closetag should detect js and jsx files
+" MatchTagAlways should detect js and jsx files.
 let g:mta_filetypes = {
     \ 'html' : 1,
     \ 'xhtml' : 1,
@@ -195,6 +195,12 @@ let g:mta_filetypes = {
     \ 'javascript.jsx' : 1,
     \}
 
+" Custom highlight colors for MatchTagAlways
+let g:mta_use_matchparen_group = 0
+let g:mta_set_default_matchtag_color = 0
+highlight MatchTag ctermfg=blue ctermbg=black guifg=blue guibg=black
+
+" vim-closetag should detect js and jsx files
 let g:closetag_filenames = "*.html,*.xhtml,*.xml,*.js,*.html.erb"
 
 set exrc

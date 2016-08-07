@@ -18,7 +18,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx' " jsx support (highlighting)
 Plugin 'janko-m/vim-test' " Run unit tests within vim
 Plugin 'sjl/gundo.vim' " File history
-Plugin 'easymotion/vim-easymotion' " Navigate within file
 Plugin 'ctrlpvim/ctrlp.vim' " Search and open files
 Plugin 'tpope/vim-surround' " Quickly add, change, delete surrounding brackets, parens, etc.
 Plugin 'rstacruz/sparkup' " Zen coding
@@ -30,13 +29,19 @@ Plugin 'jiangmiao/auto-pairs' " Highlights matching bracket, parens, etc.
 Plugin 'Valloric/MatchTagAlways' " Highlights matching html tag
 Plugin 'alvan/vim-closetag' " Closes a html tag automaticall
 Plugin 'pmsorhaindo/syntastic-local-eslint.vim' " Use local .eslintrc
-Plugn 'tpope/vim-eunuch' " Unix commands inside vim
+Plugin 'tpope/vim-eunuch' " Unix commands inside vim
+Plugin 'airblade/vim-gitgutter' " Show diff in the left side pane (gutter)
+Plugin 'mhinz/vim-startify' " Vim session management
+Plugin 'wesQ3/vim-windowswap' " Swap windows between splits quickly
+Plugin 'bkad/CamelCaseMotion' " Navigate to next camelBumpPart or underscore_part
+Plugin 'wellle/targets.vim' " A bunch of useful navigation targets
+Plugin 'tpope/vim-endwise' " Automatically add smart endings like fi after if [...]; do in bash
+Plugin 'ap/vim-css-color' " Highlight css colors in corresponding color
 
 " Base config
 set fileencodings=ucs-bom,utf-8,latin1
 set nocompatible
 set number
-set relativenumber
 set ruler
 set title
 set smarttab
@@ -162,9 +167,6 @@ nmap <leader>a :TestSuite<CR>
 nmap <leader>l :TestLast<CR>
 nmap <leader>g :TestVisit<CR>
 
-" Easymotion
-map <Leader> <Plug>(easymotion-prefix)
-
 " CtrlP
 let g:ctrlp_custom_ignore = {
     \ 'dir': '\v[\/](\.git|node_modules|logs|amps-standalone|venv|test-reports)$',
@@ -203,6 +205,9 @@ highlight MatchTag ctermfg=blue ctermbg=black guifg=blue guibg=black
 
 " vim-closetag should detect js and jsx files
 let g:closetag_filenames = "*.html,*.xhtml,*.xml,*.js,*.html.erb"
+
+" Initialize CamelCaseMotion (Map default keys)
+call camelcasemotion#CreateMotionMappings('<leader>')
 
 set exrc
 set secure

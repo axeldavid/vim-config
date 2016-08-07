@@ -2,7 +2,7 @@
 " Based on config from samueljon
 """""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'

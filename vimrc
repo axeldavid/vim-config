@@ -2,7 +2,7 @@
 " Based on config from samueljon
 """""""""""""""""""""""""""""""""""
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
@@ -27,6 +27,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'mlaursen/vim-react-snippets'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'Valloric/MatchTagAlways'
+Plugin 'alvan/vim-closetag'
+Plugin 'pmsorhaindo/syntastic-local-eslint.vim'
 
 " Base config
 set fileencodings=ucs-bom,utf-8,latin1
@@ -182,6 +185,17 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " YouCompleteMe Close preview window automatically
 autocmd CompleteDone * pclose
+
+" MatchTagAlways and vim-closetag should detect js and jsx files
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jinja' : 1,
+    \ 'javascript.jsx' : 1,
+    \}
+
+let g:closetag_filenames = "*.html,*.xhtml,*.xml,*.js,*.html.erb"
 
 set exrc
 set secure

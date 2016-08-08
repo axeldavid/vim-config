@@ -37,6 +37,7 @@ Plugin 'bkad/CamelCaseMotion' " Navigate to next camelBumpPart or underscore_par
 Plugin 'wellle/targets.vim' " A bunch of useful navigation targets
 Plugin 'tpope/vim-endwise' " Automatically add smart endings like fi after if [...]; do in bash
 Plugin 'ap/vim-css-color' " Highlight css colors in corresponding color
+Plugin 'craigemery/vim-autotag' " Autogenerate ctags
 
 " Base config
 set fileencodings=ucs-bom,utf-8,latin1

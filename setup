@@ -2,19 +2,6 @@
 
 required_packages='build-essential cmake python-dev python3-dev exuberant-ctags'
 
-answered_yes() {
-    old_stty_cfg=$(stty -g)
-    stty raw -echo
-    answer=$( while ! head -c 1 | grep -i '[ny]' ;do true ;done )
-    stty $old_stty_cfg
-    echo $answer
-    if echo "$answer" | grep -iq "^y" ;then
-        return 0
-    else
-        return 1
-    fi
-}
-
 is_installed() {
     package_name=$1
     installed=$(dpkg-query -W -f='${Status}' ${package_name} 2>/dev/null | grep -c "ok installed")
@@ -30,8 +17,9 @@ install_missing_packages() {
     do
         if ! is_installed $package; then
             echo -n 'Required package '$package' is not installed. Do you want to install it? [Y/n] '
-            if answered_yes;
-            then
+            read -n 1 response </dev/tty
+            echo ''
+            if [[ $response =~ ^(y|Y)$ ]] ; then
                 sudo apt-get install $package
             else
                 echo 'Installation aborted'

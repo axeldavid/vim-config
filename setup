@@ -38,19 +38,30 @@ main() {
         exit 1
     fi
 
+    # Install missing required packages if there are any.
+    # User will be promped before any installation is done.
     install_missing_packages $required_packages
 
     git clone --recursive git@github.com:axeldavid/vim-config.git ~/.vim
     ln -s ~/.vim/vimrc ~/.vimrc
     vim +PluginInstall +qall
 
+    # Set ctags config if it doesn't exist already
     if [ ! -f ~/.ctags ]; then
         ln -s ~/.vim/ctags ~/.ctags
+    else
+        echo "Found existin ctags config. Not overriding"
     fi
 
+    # Set tern config if it doesn't exist already
     if [ ! -f ~/.tern-config ]; then
         ln -s ~/.vim/tern-config ~/.tern-config
+    else
+        echo "Found existing tern config. Not overriding."
     fi
+
+    # Install tern completer for YouCompleteMe vim plugin
+    ~/.vim/bundle/YouCompleteMe/install.py --tern-completer
 }
 
 main

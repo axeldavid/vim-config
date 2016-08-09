@@ -11,7 +11,7 @@ Plugin 'scrooloose/syntastic' " Syntax checker
 Plugin 'tpope/vim-dispatch' " Separate window for suff like test results
 Plugin 'tpope/vim-fugitive' " Git wrapper
 Plugin 'altercation/vim-colors-solarized' " Solarized color scheme (Well tested on users)
-Plugin 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' } " Autocomplete
+Plugin 'Valloric/YouCompleteMe', { 'do': './install.py' } " Autocomplete
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " Status line
 Plugin 'terryma/vim-multiple-cursors' " Change multiple lines simultaneously
 Plugin 'pangloss/vim-javascript'

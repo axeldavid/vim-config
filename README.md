@@ -1,5 +1,5 @@
-## Installation
+## Installation on Ubuntu
 
 ```bash
-curl https://raw.githubusercontent.com/axeldavid/vim-config/master/setup | sh
+curl -s https://raw.githubusercontent.com/axeldavid/vim-config/master/setup | sh
 ```

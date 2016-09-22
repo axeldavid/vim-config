@@ -38,6 +38,8 @@ Plugin 'wellle/targets.vim' " A bunch of useful navigation targets
 Plugin 'tpope/vim-endwise' " Automatically add smart endings like fi after if [...]; do in bash
 Plugin 'ap/vim-css-color' " Highlight css colors in corresponding color
 Plugin 'craigemery/vim-autotag' " Autogenerate ctags
+Plugin 'LaTeX-Box-Team/LaTeX-Box' " LaTeX support
+Plugin 'vim-scripts/MatlabFilesEdition' " Official Matlab settings
 
 " Base config
 set fileencodings=ucs-bom,utf-8,latin1

@@ -20,7 +20,7 @@ install_missing_packages() {
             read -n 1 response </dev/tty
             echo ''
             if [[ $response =~ ^(y|Y)$ ]] ; then
-                sudo apt-get install $package
+                sudo apt-get install -y $package
             else
                 echo 'Installation aborted'
                 exit 1
